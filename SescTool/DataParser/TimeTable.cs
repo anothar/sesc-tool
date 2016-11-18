@@ -80,8 +80,9 @@ namespace ClassTimetable
 		}
 
 		public SchoolDay(string name)
-		{
-			DayOfWeekName = name;
+        {
+            Lessons = new List<Lesson>();
+            DayOfWeekName = name;
 		}
 
 		public void AddLesson(Lesson lesson)

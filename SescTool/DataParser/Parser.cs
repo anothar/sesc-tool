@@ -26,10 +26,10 @@ namespace DataParser
 
 			var req = new HttpRequest { CharacterSet = Encoding.GetEncoding("windows-1251") };
 
-			var reqParams = new xNet.Collections.StringDictionary
+			var reqParams = new RequestParams
 			{
 				["form"] = "tmtblF1",
-				["tmtblTip"] = "1",
+				["tmtblTip"] = "0",
 				["form"] = "tmtblF5",
 				["showKla"] = Class
 			};
@@ -52,8 +52,8 @@ namespace DataParser
 			dayOfWeek = DayOfWeekToInt(dayOfWeek);
 			var req = new HttpRequest { CharacterSet = Encoding.GetEncoding("windows-1251") };
 
-			var reqParams = new xNet.Collections.StringDictionary
-			{
+			var reqParams = new RequestParams
+            {
 				["form"] = "tmtblF1",
 				["tmtblTip"] = "3",
 				["form"] = "tmtblF4",
