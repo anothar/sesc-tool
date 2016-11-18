@@ -3,10 +3,121 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SescTool"
+        xmlns:controls="clr-namespace:SescTool.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="Project007"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="ToggleButton">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+    </Window.Resources>
+    <TabControl>
+        <!--LESSONS-->
+        <TabItem Header="Расписание">
+            <TabItem.Content>
+                <!--MAIN-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <!--NAVIGATION-->
+                    <StackPanel Grid.Row="0" Grid.Column="0" ToggleButton.PreviewMouseUp="NavigationButtonsOnClick">
+                        <ToggleButton Name="MDB">Пн.</ToggleButton>
+                        <ToggleButton Name="TDB">Вт.</ToggleButton>
+                        <ToggleButton Name="WDB">Ср.</ToggleButton>
+                        <ToggleButton Name="THDB">Чт.</ToggleButton>
+                        <ToggleButton Name="FDB">Пт.</ToggleButton>
+                        <ToggleButton Name="SDB">Сб.</ToggleButton>
+                    </StackPanel>
+                    <!--ENDNAVIGATION-->
+                    <!--LESSONS-->
+                    <ScrollViewer Grid.Column="1" VerticalAlignment="Top" x:Name="Scroller" ScrollChanged="ScrollerOnChanged">
+                        <StackPanel>
+                            <!--HEADER-->
+                            <StackPanel x:Name="Header">
+                                <Grid Margin="5" MaxHeight="30">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <ComboBox Grid.Column="1" Margin="20, 3" IsEditable="True" SelectionChanged="CombоBoxOnChanged">
+                                        <ComboBoxItem Content="8а"></ComboBoxItem>
+                                        <ComboBoxItem Content="8л"></ComboBoxItem>
+                                        <ComboBoxItem Content="8с"></ComboBoxItem>
+                                        <ComboBoxItem Content="9а"></ComboBoxItem>
+                                        <ComboBoxItem Content="9б"></ComboBoxItem>
+                                        <ComboBoxItem Content="9е"></ComboBoxItem>
+                                        <ComboBoxItem Content="9л"></ComboBoxItem>
+                                        <ComboBoxItem Content="9с"></ComboBoxItem>
+                                        <ComboBoxItem Content="10а"></ComboBoxItem>
+                                        <ComboBoxItem Content="10б"></ComboBoxItem>
+                                        <ComboBoxItem Content="10в"></ComboBoxItem>
+                                        <ComboBoxItem Content="10г"></ComboBoxItem>
+                                        <ComboBoxItem Content="10д"></ComboBoxItem>
+                                        <ComboBoxItem Content="10е"></ComboBoxItem>
+                                        <ComboBoxItem Content="10з"></ComboBoxItem>
+                                        <ComboBoxItem Content="10к"></ComboBoxItem>
+                                        <ComboBoxItem Content="10л"></ComboBoxItem>
+                                        <ComboBoxItem Content="10м"></ComboBoxItem>
+                                        <ComboBoxItem Content="10с"></ComboBoxItem>
+                                        <ComboBoxItem Content="11а"></ComboBoxItem>
+                                        <ComboBoxItem Content="11б"></ComboBoxItem>
+                                        <ComboBoxItem Content="11в"></ComboBoxItem>
+                                        <ComboBoxItem Content="11г"></ComboBoxItem>
+                                        <ComboBoxItem Content="11д"></ComboBoxItem>
+                                        <ComboBoxItem Content="11е"></ComboBoxItem>
+                                        <ComboBoxItem Content="11к"></ComboBoxItem>
+                                        <ComboBoxItem Content="11з"></ComboBoxItem>
+                                        <ComboBoxItem Content="11л"></ComboBoxItem>
+                                        <ComboBoxItem Content="11м"></ComboBoxItem>
+                                        <ComboBoxItem Content="11с"></ComboBoxItem>
+                                    </ComboBox>
+                                    <TextBlock Grid.Column="0" Text="Выберите класс: " TextAlignment="Right" FontSize="19"></TextBlock>
+                                </Grid>
+                            </StackPanel>
+                            <!--ENDHEADER-->
+                            <!--CONTENT-->
+                            <StackPanel>
+                                <StackPanel x:Name="MDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Понедельник</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="MD"></controls:LessonGrid>
+                                </StackPanel>
+                                <StackPanel x:Name="TDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Вторник</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="TD"></controls:LessonGrid>
+                                </StackPanel>
+                                <StackPanel x:Name="WDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Среда</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="WD"></controls:LessonGrid>
+                                </StackPanel>
+                                <StackPanel x:Name="THDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Четверг</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="THD"></controls:LessonGrid>
+                                </StackPanel>
+                                <StackPanel x:Name="FDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Пятница</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="FD"></controls:LessonGrid>
+                                </StackPanel>
+                                <StackPanel x:Name="SDSP">
+                                    <TextBlock FontWeight="Bold" FontSize="16">Суббота</TextBlock>
+                                    <controls:LessonGrid Margin="10" x:Name="SD"></controls:LessonGrid>
+                                </StackPanel>
+                                <!--ENDCONTENT-->
+                            </StackPanel>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem Header="Электронный журнал">
+            <TabItem.Content>
+                <Grid>
+
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+    </TabControl>
 </Window>
