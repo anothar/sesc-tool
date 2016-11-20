@@ -1,6 +1,8 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using SESC.DataParser;
 
 namespace SescTool
 {
@@ -20,12 +22,12 @@ namespace SescTool
 
 		}
 
-		private void CombоBoxOnChanged(object sender, SelectionChangedEventArgs e)
+		private async void CombоBoxOnChanged(object sender, SelectionChangedEventArgs e)
 		{
 			var comboBox = sender as ComboBox;
-			var comboBoxItem = comboBox?.SelectedItem as ComboBoxItem;
+			var comboBoxItem = comboBox?.SelectedItem as String;
 			if(comboBoxItem == null) return;
-			var week = DataParser.TimetableParser.GetStaticSchoolWeekOfClass(comboBoxItem.Content.ToString());
+			var week =await TimetableParser.GetStaticSchoolWeekOfClass(comboBoxItem);
 			MD.Day = week.Days[0];
 			TD.Day = week.Days[1];
 			WD.Day = week.Days[2];

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SescTool", "SescTool\SescTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParser", "DataParser\DataParser.csproj", "{68CBAA15-2666-47C3-AC28-3369BA5AFD39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataParser.Tests", "DataParser.Tests\DataParser.Tests.csproj", "{F99FF29A-B434-49ED-959A-1D58638FBAE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{68CBAA15-2666-47C3-AC28-3369BA5AFD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68CBAA15-2666-47C3-AC28-3369BA5AFD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68CBAA15-2666-47C3-AC28-3369BA5AFD39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99FF29A-B434-49ED-959A-1D58638FBAE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99FF29A-B434-49ED-959A-1D58638FBAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99FF29A-B434-49ED-959A-1D58638FBAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99FF29A-B434-49ED-959A-1D58638FBAE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

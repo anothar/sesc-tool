@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="clr-namespace:SescTool.Controls"
+        xmlns:dataParser="clr-namespace:SESC.DataParser;assembly=SESC.DataParser"
         mc:Ignorable="d"
         Title="Project007"
         Loaded="Window_Loaded">
@@ -43,37 +44,8 @@
                                         <ColumnDefinition Width="8*"></ColumnDefinition>
                                         <ColumnDefinition Width="2*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <ComboBox Grid.Column="1" Margin="20, 3" IsEditable="True" SelectionChanged="CombоBoxOnChanged">
-                                        <ComboBoxItem Content="8а"></ComboBoxItem>
-                                        <ComboBoxItem Content="8л"></ComboBoxItem>
-                                        <ComboBoxItem Content="8с"></ComboBoxItem>
-                                        <ComboBoxItem Content="9а"></ComboBoxItem>
-                                        <ComboBoxItem Content="9б"></ComboBoxItem>
-                                        <ComboBoxItem Content="9е"></ComboBoxItem>
-                                        <ComboBoxItem Content="9л"></ComboBoxItem>
-                                        <ComboBoxItem Content="9с"></ComboBoxItem>
-                                        <ComboBoxItem Content="10а"></ComboBoxItem>
-                                        <ComboBoxItem Content="10б"></ComboBoxItem>
-                                        <ComboBoxItem Content="10в"></ComboBoxItem>
-                                        <ComboBoxItem Content="10г"></ComboBoxItem>
-                                        <ComboBoxItem Content="10д"></ComboBoxItem>
-                                        <ComboBoxItem Content="10е"></ComboBoxItem>
-                                        <ComboBoxItem Content="10з"></ComboBoxItem>
-                                        <ComboBoxItem Content="10к"></ComboBoxItem>
-                                        <ComboBoxItem Content="10л"></ComboBoxItem>
-                                        <ComboBoxItem Content="10м"></ComboBoxItem>
-                                        <ComboBoxItem Content="10с"></ComboBoxItem>
-                                        <ComboBoxItem Content="11а"></ComboBoxItem>
-                                        <ComboBoxItem Content="11б"></ComboBoxItem>
-                                        <ComboBoxItem Content="11в"></ComboBoxItem>
-                                        <ComboBoxItem Content="11г"></ComboBoxItem>
-                                        <ComboBoxItem Content="11д"></ComboBoxItem>
-                                        <ComboBoxItem Content="11е"></ComboBoxItem>
-                                        <ComboBoxItem Content="11к"></ComboBoxItem>
-                                        <ComboBoxItem Content="11з"></ComboBoxItem>
-                                        <ComboBoxItem Content="11л"></ComboBoxItem>
-                                        <ComboBoxItem Content="11м"></ComboBoxItem>
-                                        <ComboBoxItem Content="11с"></ComboBoxItem>
+                                    <ComboBox Grid.Column="1" Margin="20, 3" IsEditable="True" SelectionChanged="CombоBoxOnChanged"
+                                              ItemsSource="{x:Static dataParser:TimetableParser.Classes}">
                                     </ComboBox>
                                     <TextBlock Grid.Column="0" Text="Выберите класс: " TextAlignment="Right" FontSize="19"></TextBlock>
                                 </Grid>
