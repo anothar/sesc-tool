@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SESC.DataParser
+namespace SESC.DataParser.ClassTimetable
 {
     /// <summary>
     /// Объект хранит расписание на неделю для одного класса

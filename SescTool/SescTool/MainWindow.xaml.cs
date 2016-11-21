@@ -27,7 +27,7 @@ namespace SescTool
 			var comboBox = sender as ComboBox;
 			var comboBoxItem = comboBox?.SelectedItem as String;
 			if(comboBoxItem == null) return;
-			var week =await TimetableParser.GetStaticSchoolWeekOfClass(comboBoxItem);
+			var week =await TimetableParser.Instance.GetStaticSchoolWeekOfClass(comboBoxItem);
 			MD.Day = week.Days[0];
 			TD.Day = week.Days[1];
 			WD.Day = week.Days[2];

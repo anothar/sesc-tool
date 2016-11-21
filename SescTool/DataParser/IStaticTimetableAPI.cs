@@ -6,7 +6,10 @@ using AngleSharp.Dom.Html;
 
 namespace SESC.DataParser
 {
-    internal interface ISESCWebSiteParser
+    /// <summary>
+    /// Интерфейс для олучения html-документов с сайта СУНЦА
+    /// </summary>
+    internal interface IStaticTimetableAPI
     {
         /// <summary>
         /// Получает html-страницу с занятостью кабинетов

@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Media;
 using SESC.DataParser;
+using SESC.DataParser.ClassTimetable;
 
 namespace SescTool.Controls
 {

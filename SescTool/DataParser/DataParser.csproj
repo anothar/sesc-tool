@@ -34,16 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Classroom.cs" />
-    <Compile Include="ISESCWebSiteParser.cs" />
-    <Compile Include="SESCWebSiteParser.cs" />
-    <Compile Include="Lesson.cs" />
-    <Compile Include="SchoolDay.cs" />
-    <Compile Include="SchoolWeek.cs" />
+    <Compile Include="ClassTimetable\Classroom.cs" />
+    <Compile Include="ClassroomsEmployment\Classroom.cs" />
+    <Compile Include="ClassroomsEmployment\Lesson.cs" />
+    <Compile Include="ClassroomsEmployment\SchoolDay.cs" />
+    <Compile Include="IStaticTimetableAPI.cs" />
     <Compile Include="StaticTimetableAPI.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PrimaryLesson.cs" />
+    <Compile Include="ClassTimetable\Lesson.cs" />
+    <Compile Include="ClassTimetable\SchoolDay.cs" />
+    <Compile Include="ClassTimetable\SchoolWeek.cs" />
     <Compile Include="TimetableParser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ClassTimetable\PrimaryLesson.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">

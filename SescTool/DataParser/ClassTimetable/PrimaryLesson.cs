@@ -1,4 +1,4 @@
-﻿namespace SESC.DataParser
+﻿namespace SESC.DataParser.ClassTimetable
 {
 	/// <summary>
 	/// Урок в одной подгруппе

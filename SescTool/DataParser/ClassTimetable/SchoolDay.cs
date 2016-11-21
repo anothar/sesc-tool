@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SESC.DataParser
+namespace SESC.DataParser.ClassTimetable
 {
     /// <summary>
     /// –асписание на один день дл€ одного класса

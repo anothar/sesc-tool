@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SESCWebSiteParserTests.cs" />
     <Compile Include="StaticTimetableAPITests.cs" />
     <Compile Include="TimetableParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
